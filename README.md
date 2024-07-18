@@ -1,3 +1,9 @@
+My project name is Online_Library_System.
+Step 1: Set Up Django Project
+1. Install Django: pip install django
+2. Create a Django project:django-admin startproject online_library
+cd online_library
+3. Create an app: python manage.py startapp library
 I have used Python in the back-end of my project and I have used Django framework and I have used Django's default database Sqlite3 and in the front-end I have used HTML, Boostrap in my project. I have used this technology in my project.
 First of all we have to install Python and Django in our laptop or system.
 To install python, we have to click on https://python.org/ on our browser and then download it from there.
