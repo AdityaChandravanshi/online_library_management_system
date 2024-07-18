@@ -7,3 +7,13 @@ Then after the project is installed, we will go to the comment prompt and type c
 ->cd online_library_system
 Then we have to create an app. The commands for the app are python manage.py startapp online_library_system.
 Then we have to add the app in the settings.py file. which is the name of our app.
+Example:- Like- Settings.py file
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'online_library_system_app', <------App name
+]
