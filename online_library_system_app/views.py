@@ -16,49 +16,26 @@ def index(request):
 
 def add_author(request):
     if request.method == 'POST':
-        try:
-            name = request.POST['name']
-            email = request.POST['email']
-            bio = request.POST['bio']
-            author = Author.objects.create(name=name, email=email, bio=bio)
-            messages.success(request, 'Author added successfully!')
-            return redirect('author_list') 
-        except Exception as e:
-            messages.error(request, f'Error adding author: {e}') 
-    return render(request, 'add_author.html')
-
-def add_author(request):
-    if request.method == 'POST':
         form = AuthorForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('author_list')  
+            messages.success(request, 'Author added successfully!')
+            return redirect('author_list')
+        else:
+            messages.error(request, 'Error adding author. Please correct the errors below.')
     else:
         form = AuthorForm()
     return render(request, 'add_author.html', {'form': form})
 
 def add_book(request):
     if request.method == 'POST':
-        try:
-            title = request.POST['title']
-            genre = request.POST['genre']
-            published_date = parse_date(request.POST['published_date'])
-            author_id = request.POST['author']
-            author = Author.objects.get(pk=author_id)
-            book = Book.objects.create(title=title, genre=genre, published_date=published_date, author=author)
-            messages.success(request, 'Book added successfully!')
-            return redirect('book_list')  
-        except Exception as e:
-            messages.error(request, f'Error adding book: {e}')
-    authors = Author.objects.all()
-    return render(request, 'add_book.html', {'authors': authors})
-
-def add_book(request):
-    if request.method == 'POST':
         form = BookForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('book_list') 
+            messages.success(request, 'Book added successfully!')
+            return redirect('book_list')
+        else:
+            messages.error(request, 'Error adding book. Please correct the errors below.')
     else:
         form = BookForm()
     authors = Author.objects.all()
@@ -66,26 +43,13 @@ def add_book(request):
 
 def add_borrow_record(request):
     if request.method == 'POST':
-        try:
-            user_name = request.POST['user_name']
-            book_id = request.POST['book']
-            borrow_date = parse_date(request.POST['borrow_date'])
-            return_date = parse_date(request.POST['return_date'])
-            book = Book.objects.get(pk=book_id)
-            borrow_record = BorrowRecord.objects.create(user_name=user_name, book=book, borrow_date=borrow_date, return_date=return_date)
-            messages.success(request, 'Borrow record added successfully!')
-            return redirect('borrow_list')
-        except Exception as e:
-            messages.error(request, f'Error adding borrow record: {e}')  
-    books = Book.objects.all()
-    return render(request, 'add_borrow_record.html', {'books': books})
-
-def add_borrow_record(request):
-    if request.method == 'POST':
         form = BorrowRecordForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Borrow record added successfully!')
             return redirect('borrow_list')
+        else:
+            messages.error(request, 'Error adding borrow record. Please correct the errors below.')
     else:
         form = BorrowRecordForm()
     books = Book.objects.all()

@@ -5,6 +5,12 @@ class AuthorForm(forms.ModelForm):
     class Meta:
         model = Author
         fields = ['name', 'email', 'bio']
+
+    def clean_name(self):
+        name = self.cleaned_data.get('name')
+        if not name:
+            raise forms.ValidationError("This field is required.")
+        return name
     
     def clean_email(self):
         email = self.cleaned_data.get('email')
@@ -13,6 +19,12 @@ class AuthorForm(forms.ModelForm):
         if '@' not in email or '.' not in email:
             raise forms.ValidationError("Enter a valid email address.")
         return email
+    
+    def clean_bio(self):
+        bio = self.cleaned_data.get('bio')
+        if not bio:
+            raise forms.ValidationError("This field is required.")
+        return bio
     
 class BookForm(forms.ModelForm):
     class Meta:
@@ -53,6 +65,12 @@ class BorrowRecordForm(forms.ModelForm):
         if not user_name:
             raise forms.ValidationError("This field is required.")
         return user_name
+    
+    def clean_book(self):
+        book = self.cleaned_data.get('book')
+        if not book:
+            raise forms.ValidationError("This field is required.")
+        return book
 
     def clean_borrow_date(self):
         borrow_date = self.cleaned_data.get('borrow_date')
