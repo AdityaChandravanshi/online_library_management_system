@@ -68,3 +68,10 @@ Then we have to add the app in the settings.py file. which is the name of our ap
 I have created a templates folder inside the app and created some files in it.
 
 like file name is index.html, add_author.html, add_book.html, add_borrow_record.html, author_list.html, book_list.html, borrow_list.html files are there.
+
+I have used Django Form Validation in my application, so that user cannot submit empty form, every single field has to be filled then form will be submitted. If the user has left any field blank, he will get a message or a notification will be generated where the pure field is filled. It is important that my application has a good user interface.
+
+I have used CSRF token in my forms, so that my application remains secure and user information also remains secure, my forms are in other HTML files in templates folder.
+
+I have used CSS to design my application, I have used both External CSS and Internal CSS in my application so that my application user interface remains good.
+I have used CSS to design my application, I have used both External CSS and Internal CSS in my application so that my application user interface remains good.
