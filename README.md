@@ -1,16 +1,43 @@
-I have ensured that the code here is original and not copied from any external source and the code here is my own code.
-
 My project name is Online_Library_System.
 
-I have used Python in the back-end of my project and I have used Django framework and I have used Django's default database Sqlite3 and in the front-end I have used HTML, Boostrap in my project. I have used this technology in my project.
+Usage:
 
-I have use proper Backend validations and error handling error message is showing up in this project.
+Add Author : 
+-> Click on "Add Author" in the navigation menu.
+-> Fill in the author's name, email, and bio.
+-> Click "Add Author" to save the author.
+-> All field's are required in this form.
 
-First of all we have to install Python and Django in our laptop or system.
+Add Book : 
+-> Click on "Add Book" in the navigation menu.
+-> Fill in the book's title, genre, published date, and select an author.
+-> Click "Add Book" to save the book.
+-> All field's are required in this form.
 
-To install python, we have to click on link https://python.org/ on our browser and then download it from there.
+Add Borrow Record : 
+-> Click on "Add Borrow Record" in the navigation menu.
+-> Select a book, fill in the borrower's name, borrow date, and return date.
+-> Click "Add Borrow Record" to save the record.
+-> All field's are required in this form.
 
-After that we have to install Django by typing command prompt or write the command pip install Django.
+View Lists:
+
+-> Authors List: Click on "Authors List" to view all authors.
+
+-> Books List: Click on "Books List" to view all books.
+
+-> Borrow Records List: Click on "Borrow Records List" to view all borrow records.
+
+Export to Excel:
+-> Click on "Export Excel Sheet" to download the borrow records as an Excel file.
+
+Back-end Validations:
+-> I have use proper Backend validations and error handling error message is showing up in this project.
+
+Contributing
+-> If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
+
+->I have used Python in the back-end of my project and I have used Django framework and I have used Django's default database Sqlite3 and in the front-end I have used HTML, Boostrap in my project. I have used this technology in my project.
 
 Step 1: Set Up Django Project
 
@@ -56,24 +83,3 @@ Step 6: Run the Server
 Start the Django development server to test the application:
 
 python manage.py runserver
-
-Then we have to create the project by typing django-admin startProject Online_Library_System from the command prompt.
-
-Then after the project is installed, we will go to the comment prompt and type cd online_library_system and go inside this project.
-
-->cd online_library_system
-
-Then we have to create an app. The commands for the app are python manage.py startapp online_library_system.
-
-Then we have to add the app in the settings.py file. which is the name of our app.
-
-I have created a templates folder inside the app and created some files in it.
-
-like file name is index.html, add_author.html, add_book.html, add_borrow_record.html, author_list.html, book_list.html, borrow_list.html files are there.
-
-I have used Django Form Validation in my application, so that user cannot submit empty form, every single field has to be filled then form will be submitted. If the user has left any field blank, he will get a message or a notification will be generated where the pure field is filled. It is important that my application has a good user interface.
-
-I have used CSRF token in my forms, so that my application remains secure and user information also remains secure, my forms are in other HTML files in templates folder.
-
-I have used CSS to design my application, I have used both External CSS and Internal CSS in my application so that my application user interface remains good.
-I have used CSS to design my application, I have used both External CSS and Internal CSS in my application so that my application user interface remains good.
