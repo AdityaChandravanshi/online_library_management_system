@@ -4,6 +4,8 @@ My project name is Online_Library_System.
 
 I have used Python in the back-end of my project and I have used Django framework and I have used Django's default database Sqlite3 and in the front-end I have used HTML, Boostrap in my project. I have used this technology in my project.
 
+I have use proper Backend validations and error handling error message is showing up in this project.
+
 First of all we have to install Python and Django in our laptop or system.
 
 To install python, we have to click on https://python.org/ on our browser and then download it from there.
