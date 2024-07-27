@@ -8,7 +8,7 @@ I have use proper Backend validations and error handling error message is showin
 
 First of all we have to install Python and Django in our laptop or system.
 
-To install python, we have to click on https://python.org/ on our browser and then download it from there.
+To install python, we have to click on link https://python.org/ on our browser and then download it from there.
 
 After that we have to install Django by typing command prompt or write the command pip install Django.
 
