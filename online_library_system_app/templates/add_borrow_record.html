@@ -13,24 +13,46 @@
     <a class="btn btn-primary" href="/borrow-records" role="button">Borrow Record List</a>
     <a class="btn btn-primary" href="/export-excel" role="button">Export Excel Sheet</a>
     <hr>
+
     <form method="post">
         {% csrf_token %}
-        <label for="user_name">User Name:</label>
-        <input type="text" id="user_name" name="user_name" required><br><br>
-
-        <label for="book">Book:</label>
-        <select id="book" name="book" required>
-            {% for book in books %}
-            <option value="{{ book.id }}">{{ book.title }}</option>
-            {% endfor %}
-        </select><br><br>
-
-        <label for="borrow_date">Borrow Date:</label>
-        <input type="date" id="borrow_date" name="borrow_date" required><br><br>
-
-        <label for="return_date">Return Date:</label>
-        <input type="date" id="return_date" name="return_date" required><br><br>
-
+        <div>
+            <label for="id_user_name">User Name:</label>
+            {{ form.user_name }}
+            {% if form.user_name.errors %}
+                <div style="color: red;">
+                    {{ form.user_name.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div>
+            <label for="id_book">Book:</label>
+            {{ form.book }}
+            {% if form.book.errors %}
+                <div style="color: red;">
+                    {{ form.book.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div>
+            <label for="id_borrow_date">Borrow Date:</label>
+            <input type="date" id="borrow_date" name="borrow_date">
+            {% if form.borrow_date.errors %}
+                <div style="color: red;">
+                    {{ form.borrow_date.errors }}
+                </div>
+            {% endif %}
+        </div>
+        <div>
+            <label for="id_return_date">Return Date:</label>
+            <input type="date" id="return_date" name="return_date">
+            {% if form.return_date.errors %}
+                <div style="color: red;">
+                    {{ form.return_date.errors }}
+                </div>
+            {% endif %}
+        </div>
         <button class="btn btn-primary" type="submit">Add Borrow Record</button>
     </form>
+
 {% endblock %}
