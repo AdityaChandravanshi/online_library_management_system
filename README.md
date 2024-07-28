@@ -34,6 +34,9 @@ Export to Excel:
 Back-end Validations:
 -> I have use proper Backend validations and error handling error message is showing up in this project.
 
+Django Pagination Concept:
+-> I have use django pagination concept in our project, All view lists, Like Author Lists, Book Lists, Borrow Record Lists.
+
 Contributing
 -> If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are welcome.
 
