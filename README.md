@@ -1,5 +1,32 @@
 My project name is Online_Library_System.
 
+Table of Contents
+Overview
+Features
+Requirements
+Usage
+Add Author
+Add Book
+Add Borrow Record
+View Lists
+Export to Excel
+Contributing
+FAQs
+Overview
+The Online Library System is a web-based application built with Django to manage a library's operations. Users can manage authors, books, and borrowing records easily through a user-friendly interface.
+
+Features
+Add Author: Create new author profiles.
+Add Book: Add new books to the library and assign them to authors.
+Add Borrow Record: Record borrow details of books by borrowers.
+View Lists: View lists of authors, books, and borrow records.
+Export Excel: Export the list of borrow records to an Excel sheet.
+
+Requirements
+Python 3.12.0 or higher
+Django 4.2.7 or higher
+SQLite (default database)
+
 Usage:
 
 Add Author : 
