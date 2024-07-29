@@ -4,16 +4,6 @@
 
 {% block content %}
 
-<head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
-    <style>
-        .error {
-            color: red;
-        }
-    </style>
-</head>
-
     <h2>Add Author</h2>
     <hr>
     <a class="btn btn-primary" href="/add-author" role="button">Add Author</a>
@@ -27,7 +17,7 @@
     <a class="btn btn-primary" href="/export-excel-borrow-record" role="button">Export Excel Sheet Borrow Record</a>
     <a class="btn btn-primary" href="/export-excel-author-book-borrow-record" role="button">Export Excel Sheet Author, Book, Borrow Record</a>
     <hr>
-    <form id="authorForm" method="post">
+    <form method="post">
         {% csrf_token %}
         <div>
             <label for="id_name">Name:</label>
@@ -58,28 +48,5 @@
         </div>
         <button class="btn btn-primary" type="submit">Add Author</button>
     </form>
-
-    <script>
-        $(document).ready(function() {
-            $("#authorForm").validate({
-                rules: {
-                    name: "required",
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    bio: "required"
-                },
-                messages: {
-                    name: "Please enter the author's name",
-                    email: {
-                        required: "Please enter the author's email",
-                        email: "Please enter a valid email address"
-                    },
-                    bio: "Please enter the author's bio"
-                }
-            });
-        });
-    </script>
     
 {% endblock %}
