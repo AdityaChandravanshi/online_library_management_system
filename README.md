@@ -4,6 +4,7 @@ Table of Contents
 Overview
 Features
 Requirements
+Screenshot
 Usage
 Add Author
 Add Book
@@ -27,6 +28,10 @@ Python 3.12.0 or higher
 Django 4.2.7 or higher
 SQLite (default database)
 openpyxl 3.1.5
+
+Screenshot
+Add Author
+![Screenshot 2024-07-28 142100](https://github.com/user-attachments/assets/a5f00b4c-66ab-472a-af3f-c2a5282f5b0e)
 
 Usage:
 
