@@ -31,7 +31,10 @@ openpyxl 3.1.5
 
 Screenshot
 Add Author
-![Screenshot 2024-07-28 142100](https://github.com/user-attachments/assets/a5f00b4c-66ab-472a-af3f-c2a5282f5b0e)
+![AddAuthor](https://github.com/user-attachments/assets/d6cb9260-85af-44b2-b762-3b2c525df8b8)
+
+Author's List's
+![AuthorsList](https://github.com/user-attachments/assets/bc50a9bc-49cc-4c9e-a253-ff045fc00b86)
 
 Usage:
 
