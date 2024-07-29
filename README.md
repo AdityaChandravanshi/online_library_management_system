@@ -26,6 +26,7 @@ Requirements
 Python 3.12.0 or higher
 Django 4.2.7 or higher
 SQLite (default database)
+openpyxl 3.1.5
 
 Usage:
 
