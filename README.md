@@ -36,6 +36,22 @@ Add Author
 Author's List's
 ![AuthorsList](https://github.com/user-attachments/assets/bc50a9bc-49cc-4c9e-a253-ff045fc00b86)
 
+Add Book
+![AddBook](https://github.com/user-attachments/assets/f52d904b-5111-4515-8013-ab037a8aeb62)
+
+![AddBook1](https://github.com/user-attachments/assets/27efc7bd-433d-46e8-b612-a9ba3529da15)
+
+Book's List's
+![BookLists](https://github.com/user-attachments/assets/355fdaa0-7347-4e50-bfac-84a9a1cdb1a1)
+
+Add Borrow Record
+![AddBorrowRecord](https://github.com/user-attachments/assets/4aa8beb2-3cb3-48d5-895a-59e62300253b)
+
+![AddBorrowRecord1](https://github.com/user-attachments/assets/abf1d186-fc5d-4e2b-8ad8-2228004b70f5)
+
+Borrow Record List's
+![BorrowRecordLists](https://github.com/user-attachments/assets/ab2c454e-72e1-4e50-b8cb-82018adcb585)
+
 Usage:
 
 Add Author : 
