@@ -182,7 +182,7 @@ def borrow_list(request):
     context = {'records': records}
     return render(request, 'borrow_list.html', context)
 
-def export_to_excel(request):
+def export_to_excel_author(request):
     response = HttpResponse(content_type='application/ms-excel')
     response['Content-Disposition'] = 'attachment; filename=library_data.xlsx'
 
@@ -190,14 +190,22 @@ def export_to_excel(request):
     author_ws = wb.active
     author_ws.title = 'Authors'
 
-    books_ws = wb.create_sheet(title='Books')
-    borrow_ws = wb.create_sheet(title='Borrow Records')
-
     # Export Authors
     authors = Author.objects.all()
     author_ws.append(['ID', 'Name', 'Email', 'Bio'])
     for author in authors:
         author_ws.append([author.id, author.name, author.email, author.bio])
+
+    wb.save(response)
+    return response
+    
+def export_to_excel_book(request):
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename=library_data.xlsx'
+
+    wb = openpyxl.Workbook()
+    books_ws = wb.active
+    books_ws.title = 'Books'
 
     # Export Books
     books = Book.objects.all()
@@ -205,11 +213,57 @@ def export_to_excel(request):
     for book in books:
         books_ws.append([book.id, book.title, book.genre, book.published_date, book.author.name])
 
+    wb.save(response)
+    return response
+
+def export_to_excel_borrow_record(request):
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename=library_data.xlsx'
+
+    wb = openpyxl.Workbook()
+    borrow_records_ws = wb.active
+    borrow_records_ws.title = 'Borrow Records'
+
     # Export Borrow Records
     borrow_records = BorrowRecord.objects.all()
-    borrow_ws.append(['ID', 'User Name', 'Book', 'Borrow Date', 'Return Date'])
+    borrow_records_ws.append(['ID', 'User Name', 'Book', 'Borrow Date', 'Return Date'])
     for record in borrow_records:
-        borrow_ws.append([record.id, record.user_name, record.book.title, record.borrow_date, record.return_date])
+        borrow_records_ws.append([record.id, record.user_name, record.book.title, record.borrow_date, record.return_date])
+
+    wb.save(response)
+    return response
+
+def export_to_excel_author_book_borrow_record(request):
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename=library_data.xlsx'
+
+    wb = openpyxl.Workbook()
+    author_ws = wb.active
+    author_ws.title = 'Authors'
+
+    # Export Authors
+    authors = Author.objects.all()
+    author_ws.append(['ID', 'Name', 'Email', 'Bio'])
+    for author in authors:
+        author_ws.append([author.id, author.name, author.email, author.bio])
+
+    books_ws = wb.active
+    books_ws.title = 'Books'
+
+    # Export Books
+    books = Book.objects.all()
+    books_ws.append(['ID', 'Title', 'Genre', 'Published Date', 'Author'])
+    for book in books:
+        books_ws.append([book.id, book.title, book.genre, book.published_date, book.author.name])
+
+    borrow_records_ws = wb.active
+    borrow_records_ws.title = 'Borrow Records'
+
+    # Export Borrow Records
+    borrow_records = BorrowRecord.objects.all()
+    borrow_records_ws.append(['ID', 'User Name', 'Book', 'Borrow Date', 'Return Date'])
+    for record in borrow_records:
+        borrow_records_ws.append([record.id, record.user_name, record.book.title, record.borrow_date, record.return_date])
 
     wb.save(response)
     return response

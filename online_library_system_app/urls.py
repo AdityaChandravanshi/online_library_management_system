@@ -9,5 +9,8 @@ urlpatterns = [
     path('authors/', views.author_list, name='author_list'),
     path('books/', views.book_list, name='book_list'),
     path('borrow-records/', views.borrow_list, name='borrow_list'),
-    path('export-excel/', views.export_to_excel, name='export_to_excel'),
+    path('export-excel-author/', views.export_to_excel_author, name='export_to_excel_author'),
+    path('export-excel-book/', views.export_to_excel_book, name='export_to_excel_book'),
+    path('export-excel-borrow-record/', views.export_to_excel_borrow_record, name='export_to_excel_borrow_record'),
+    path('export-excel-author-book-borrow-record/', views.export_to_excel_author_book_borrow_record, name='export_to_excel_author_book_borrow_record'),
 ]
