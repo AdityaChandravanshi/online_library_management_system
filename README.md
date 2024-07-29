@@ -1,56 +1,60 @@
 My project name is Online_Library_System.
 
-Table of Contents
-Overview
-Features
-Requirements
-Screenshot
-Usage
-Add Author
-Add Book
-Add Borrow Record
-View Lists
-Export to Excel
-Contributing
-FAQs
-Overview
+Table of Contents: 
+Overview, 
+Features, 
+Requirements, 
+Screenshot, 
+Usage, 
+Add Author, 
+Add Book, 
+Add Borrow Record, 
+View Lists, 
+Export to Excel, 
+Contributing, 
+FAQs, 
+Overview: 
 The Online Library System is a web-based application built with Django to manage a library's operations. Users can manage authors, books, and borrowing records easily through a user-friendly interface.
 
-Features
+Features: 
 Add Author: Create new author profiles.
 Add Book: Add new books to the library and assign them to authors.
 Add Borrow Record: Record borrow details of books by borrowers.
 View Lists: View lists of authors, books, and borrow records.
 Export Excel: Export the list of borrow records to an Excel sheet.
 
-Requirements
-Python 3.12.0 or higher
-Django 4.2.7 or higher
-SQLite (default database)
+Requirements:
+Python 3.12.0 or higher, 
+Django 4.2.7 or higher, 
+SQLite (default database), 
 openpyxl 3.1.5
 
-Screenshot
-Add Author
+Screenshot:
+Add Author: 
 ![AddAuthor](https://github.com/user-attachments/assets/d6cb9260-85af-44b2-b762-3b2c525df8b8)
 
-Author's List's
+Author's List's: 
 ![AuthorsList](https://github.com/user-attachments/assets/bc50a9bc-49cc-4c9e-a253-ff045fc00b86)
 
-Add Book
+Add Book: 
 ![AddBook](https://github.com/user-attachments/assets/f52d904b-5111-4515-8013-ab037a8aeb62)
 
 ![AddBook1](https://github.com/user-attachments/assets/27efc7bd-433d-46e8-b612-a9ba3529da15)
 
-Book's List's
+Book's List's: 
 ![BookLists](https://github.com/user-attachments/assets/355fdaa0-7347-4e50-bfac-84a9a1cdb1a1)
 
-Add Borrow Record
+Add Borrow Record: 
 ![AddBorrowRecord](https://github.com/user-attachments/assets/4aa8beb2-3cb3-48d5-895a-59e62300253b)
 
 ![AddBorrowRecord1](https://github.com/user-attachments/assets/abf1d186-fc5d-4e2b-8ad8-2228004b70f5)
 
-Borrow Record List's
+Borrow Record List's: 
 ![BorrowRecordLists](https://github.com/user-attachments/assets/ab2c454e-72e1-4e50-b8cb-82018adcb585)
+
+Export to Excel: 
+Export to Excel Sheet's Author List's: 
+![ExportToExcelSheetsAuthorLists](https://github.com/user-attachments/assets/eeea31fb-8f71-47c8-b2ac-31b782facde8)
 
 Usage:
 
