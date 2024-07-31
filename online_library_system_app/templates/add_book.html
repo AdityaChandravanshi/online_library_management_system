@@ -4,18 +4,6 @@
 
 {% block content %}
     <h2>Add Book</h2>
-    <hr>
-    <a class="btn btn-primary" href="/add-author" role="button">Add Author</a>
-    <a class="btn btn-primary" href="/authors" role="button">Authors List</a>
-    <a class="btn btn-primary" href="/add-book" role="button">Add Book</a>
-    <a class="btn btn-primary" href="/books" role="button">Book List</a>
-    <a class="btn btn-primary" href="/add-borrow-record" role="button">Add Borrow Record</a>
-    <a class="btn btn-primary" href="/borrow-records" role="button">Borrow Record List</a>
-    <a class="btn btn-primary" href="/export-excel-author" role="button">Export Excel Sheet Author</a>
-    <a class="btn btn-primary" href="/export-excel-book" role="button">Export Excel Sheet Book</a>
-    <a class="btn btn-primary" href="/export-excel-borrow-record" role="button">Export Excel Sheet Borrow Record</a>
-    <a class="btn btn-primary" href="/export-excel-author-book-borrow-record" role="button">Export Excel Sheet Author, Book, Borrow Record</a>
-    <hr>
 
     <form method="post">
         {% csrf_token %}

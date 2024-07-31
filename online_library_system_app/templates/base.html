@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <title>{% block title %}{% endblock %}</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -16,38 +13,85 @@
             list-style-type: none;
             padding: 0;
         }
+
         .messages li {
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 5px;
         }
+
         .messages li.success {
             background-color: #d4edda;
             color: #155724;
         }
+
         .messages li.error {
             background-color: #f8d7da;
             color: #721c24;
         }
+
         .messages li.info {
             background-color: #d1ecf1;
             color: #0c5460;
         }
+
         .messages li.warning {
             background-color: #fff3cd;
             color: #856404;
         }
     </style>
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <hearder>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Online Library Management System</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/add-author">Add Author</a></li>
+                    <li><a href="/add-book">Add Book</a></li>
+                    <li><a href="/add-borrow-record">Add Borrow Record</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">View List</button>
+                            <div class="dropdown-content">
+                                <a href="/authors">Authors List</a>
+                                <a href="/books">Book List</a>
+                                <a href="/borrow-records">Borrow Record List</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Excel Sheet List</button>
+                            <div class="dropdown-content">
+                                <a href="/export-excel-author">Export Excel Sheet Authors</a>
+                                <a href="/export-excel-book">Export Excel Sheet Book</a>
+                                <a href="/export-excel-borrow-record">Export Excel Sheet Borrow Record</a>
+                                <a href="/export-excel-author-book-borrow-record">Export Excel Sheet Author, Book,
+    Borrow Record</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </hearder>
     {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
             {% endfor %}
-        </ul>
+    </ul>
     {% endif %}
     {% block content %}
     {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
